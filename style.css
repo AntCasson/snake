@@ -55,8 +55,8 @@ p.score {
   margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
-  width: 25rem;
-  height: 25rem;
+  width: 28rem;
+  height: 28rem;
   padding: 0.125rem;
   background: #cfcfcf;
   border-radius: 0.25rem;
@@ -64,19 +64,8 @@ p.score {
 }
 
 .square {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.snake {
-  background-color: hsl(150, 100%, 26%);
-}
-
-.apple {
-  background: red;
-  background: linear-gradient(#bd2323, #aa3030, #811300);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 35% 35% 41% 41% / 42% 42% 75% 75%;
 }
 
