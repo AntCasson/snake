@@ -2,6 +2,9 @@ const grid = document.querySelector('.grid')
 const startButton = document.querySelector('#start')
 const scoreDisplay = document.querySelector('#score')
 const gameOverText = document.querySelector("#game-over")
+document.querySelector(".button").addEventListener("click", function (e) {
+    party.confetti(this);
+});
 
 let squares = []
 let currentSnake = [2,1,0]

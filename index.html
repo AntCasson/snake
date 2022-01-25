@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +17,7 @@
         <h2 id="game-over"></h2>
         <p class="score">Score: <span id="score"></span></p>
         <div class="grid"></div>
-        <button id="start" class="button-pushable" role="button">
+        <button id="start" onmousedown="party.confetti(this)" class="button button-pushable" role="button">
             <span class="button-shadow"></span>
             <span class="button-edge"></span>
             <span class="button-front text">

@@ -75,8 +75,8 @@ p.score {
 .apple {
   background: red;
   background: linear-gradient(#bd2323, #aa3030, #811300);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 35% 35% 41% 41% / 42% 42% 75% 75%;
 }
 
