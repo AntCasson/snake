@@ -1,0 +1,174 @@
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: hsla(0, 0%, 5%);
+  width: 100vw;
+  color: hsl(98, 100%, 33%);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 3.125rem;
+}
+
+small {
+  margin-top: 0.125em;
+  font-size: 0.8rem;
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  max-width: 23rem;
+  font-size: 1.825rem;
+  color: hsl(0, 0%, 5%);
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+}
+
+p.score {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1.1;
+}
+
+.grid {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  width: 25rem;
+  height: 25rem;
+  padding: 0.125rem;
+  background: #cfcfcf;
+  border-radius: 0.25rem;
+  box-shadow: hsl(0, 0%, 0%) 0px 0px 2.5rem;
+}
+
+.square {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.snake {
+  background-color: hsla(150, 100%, 26%, 0.945);
+}
+
+.apple {
+  background: red;
+  background: linear-gradient(#bd2323, #aa3030, #811300);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 35% 35% 41% 41% / 42% 42% 75% 75%;
+}
+
+/* button */
+.button-pushable {
+  position: relative;
+  border: none;
+  margin-top: 2em;
+  font-weight: 700;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.button-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-front {
+  display: block;
+  position: relative;
+  padding: 0.75rem 1.625rem;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-front {
+    font-size: 1.625rem;
+    padding: 0.75em 2.625em;
+  }
+}
+
+.button-pushable:hover {
+  filter: brightness(110%);
+}
+
+.button-pushable:hover .button-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button-pushable:active .button-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-pushable:hover .button-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button-pushable:active .button-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
