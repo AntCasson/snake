@@ -69,7 +69,7 @@ p.score {
 }
 
 .snake {
-  background-color: hsla(150, 100%, 26%, 0.945);
+  background-color: hsl(150, 100%, 26%);
 }
 
 .apple {
